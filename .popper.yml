@@ -4,7 +4,27 @@ metadata:
   license: CC-BY-4.0
   publication_type: article
   upload_type: publication
-pipelines: {}
+pipelines:
+  co2-emissions:
+    envs:
+      host:
+        args: []
+    path: pipelines/co2-emissions
+    stages:
+    - setup
+    - run
+    - validate
+  myfirstpipeline:
+    envs:
+      host:
+        args: []
+    parameters: []
+    path: pipelines/myfirstpipeline
+    requirements: {}
+    stages:
+    - one
+    - two
+    - three
 search_sources:
 - popperized
 version: 1
